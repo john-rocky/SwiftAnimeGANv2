@@ -15,7 +15,10 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SwiftAnimeGANv2"),
+            name: "SwiftAnimeGANv2",
+            resources: [
+            .process("animeganHayao.mlmodelc")]
+    ),
         .testTarget(
             name: "SwiftAnimeGANv2Tests",
             dependencies: ["SwiftAnimeGANv2"]),
